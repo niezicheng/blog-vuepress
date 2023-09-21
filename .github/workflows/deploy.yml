@@ -15,8 +15,10 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Install and Build
-        run: |
-          npm ci
+        env:
+          NODE_OPTIONS: --max_old_space_size=8192
+        run: |-
+          npm install
           npm run build
 
     - name: Build and Deploy
