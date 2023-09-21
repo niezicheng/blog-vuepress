@@ -4,6 +4,9 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -11,10 +14,14 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
+    - name: Install and Build
+        run: |
+          npm ci
+          npm run build
+
     - name: Build and Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: src/.vuepress/dist
-        BUILD_SCRIPT: npm install && npm run build
