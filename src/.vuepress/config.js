@@ -12,7 +12,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#base
    */
-  base: './',
+  base: '/blog-vuepress/',
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
