@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'Vue Analysis',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -37,30 +37,28 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
+        text: '指南',
         link: '/guide/',
       },
       {
-        text: 'Config',
-        link: '/config/'
+        text: '博客',
+        items: [
+            { text: 'Github', link: 'https://github.com/niezicheng' },
+            { text: '掘金', link: 'https://juejin.cn/user/2946346894759319' }
+        ]
       },
-      {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
-      }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    sidebar: [
+      {
+        title: '欢迎学习',
+        path: '/guide/',
+        collapsable: false, // 不折叠
+        children: [
+          { title: "学前必读", path: "/guide/" },
+          { title: "vue 用法", path: "/guide/using-vue" }
+        ]
+      },
+    ]
   },
 
   /**
