@@ -35,6 +35,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
+    subSidebar: 'auto',
     nav: [
       {
         text: '指南',
@@ -54,7 +55,7 @@ module.exports = {
         path: '/guide/',
         collapsable: false, // 不折叠
         children: [
-          { title: "学前必读", path: "/guide/" },
+          { title: "介绍", path: "/guide/" },
           { title: "vue 用法", path: "/guide/using-vue" }
         ]
       },
@@ -67,5 +68,14 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-  ]
+  ],
+
+  // 主题配置
+  theme: 'reco',
+  // 语言配置
+  locales: {
+    '/': {
+      lang: 'zh-CN'
+    }
+  },
 }
