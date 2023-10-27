@@ -19,7 +19,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+    ['meta', { name: 'theme-color', content: '#3178c6' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
   ],
@@ -44,13 +44,13 @@ module.exports = {
       {
         text: '博客',
         items: [
-            { text: 'Github', link: 'https://github.com/niezicheng' },
-            { text: '掘金', link: 'https://juejin.cn/user/2946346894759319' }
+          { text: 'Github', link: 'https://github.com/niezicheng' },
+          { text: '掘金', link: 'https://juejin.cn/user/2946346894759319' }
         ]
       },
     ],
-    sidebar: [
-      {
+    sidebar: {
+      '/guide/': [{
         title: '欢迎学习',
         path: '/guide/',
         collapsable: false, // 不折叠
@@ -58,8 +58,8 @@ module.exports = {
           { title: "介绍", path: "/guide/" },
           { title: "vue 用法", path: "/guide/using-vue" }
         ]
-      },
-    ]
+      }],
+    }
   },
 
   /**
